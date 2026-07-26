@@ -24,7 +24,7 @@ npm run dev
 ```
 
 ## 🌐 Live Demo
-Add your Vercel deployment link here.
+https://browser-safe-q9j5jv53y-aqas1.vercel.app
 
 ## 👨‍💻 Author
-M. Arman Sajjad
+AQSA JAVED IQBAL
