@@ -1,20 +1,30 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🛡️ BrowserSafe AI
 
-# Run and deploy your AI Studio app
+BrowserSafe AI is an AI-powered web application designed to help users browse the internet more safely. It analyzes websites, detects potential security risks, and provides intelligent recommendations to improve online safety.
 
-This contains everything you need to run your app locally.
+## 🚀 Features
+- 🤖 AI-powered website analysis
+- 🔒 Security risk detection
+- ⚡ Fast and responsive interface
+- 📱 Mobile-friendly design
+- 🎨 Modern UI
 
-View your app in AI Studio: https://ai.studio/apps/18008881-5de5-422e-b414-4373f403e666
+## 🛠️ Technologies Used
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- AI Studio
 
-## Run Locally
+## 📦 Installation
 
-**Prerequisites:**  Node.js
+```bash
+npm install
+npm run dev
+```
 
+## 🌐 Live Demo
+Add your Vercel deployment link here.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 👨‍💻 Author
+M. Arman Sajjad
