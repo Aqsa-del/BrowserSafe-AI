@@ -108,30 +108,30 @@ Analyze this device status thoroughly and return structured JSON.`;
   return JSON.parse(response.text || "{}");
 }
 
-export async function processUrlScan(url: string, apiKeyOverride?: string): Promise<UrlScanResult> {
-  const apiKey = apiKeyOverride || process.env.GEMINI_API_KEY;
+export const TRUSTED_DOMAINS: string[] = [
+  "google.com",
+  "youtube.com",
+  "youtu.be",
+  "facebook.com",
+  "fb.com",
+  "messenger.com",
+  "instagram.com",
+  "whatsapp.com",
+  "vercel.com",
+  "vercel.app",
+  "github.com",
+  "microsoft.com",
+  "apple.com",
+];
 
-  if (!apiKey) {
-    return {
-      url,
-      domain: extractDomainFallback(url),
-      riskScore: 65,
-      category: "Suspicious",
-      summary: "Heuristic scan completed. Configure GEMINI_API_KEY for live AI threat intelligence.",
-      domainAnalysis: {
-        detectedBrand: "Unverified",
-        actualDomain: extractDomainFallback(url),
-        isTyposquatting: false,
-        usesIPAddress: /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/.test(extractDomainFallback(url)),
-        suspiciousTLD: false,
-        excessSubdomains: extractDomainFallback(url).split(".").length > 3,
-        protocol: url.startsWith("https") ? "https" : "http",
-      },
-      redFlags: ["Unverified link structure"],
-      recommendation: "Do not enter passwords or credit card details on this link.",
-      actionSteps: ["Verify the official website domain directly in your browser address bar."],
-    };
-  }
+export function isTrustedDomain(domain: string): boolean {
+  const normalized = domain.toLowerCase().trim();
+  return TRUSTED_DOMAINS.some(
+    (trusted) => normalized === trusted || normalized.endsWith("." + trusted)
+  );
+}
+  // Fallback to AI inspection for unlisted or custom domains...
+}
 
   const ai = getGenAI(apiKey);
   const systemInstruction = `You are BrowserSafe AI, a web security analyzer.
