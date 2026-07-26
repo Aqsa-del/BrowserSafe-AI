@@ -24,7 +24,7 @@ npm run dev
 ```
 
 ## 🌐 Live Demo
-https://browser-safe-q9j5jv53y-aqas1.vercel.app
+https://browser-safe-ai.vercel.app
 
 ## 👨‍💻 Author
 AQSA JAVED IQBAL
