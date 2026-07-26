@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/api/scan/device",
+      "destination": "/api/device"
+    },
+    {
+      "source": "/api/scan/url",
+      "destination": "/api/url"
+    },
+    {
+      "source": "/api/scan/email",
+      "destination": "/api/email"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

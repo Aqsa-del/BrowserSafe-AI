@@ -1,0 +1,6 @@
+{
+  "name": "BrowserSafe AI",
+  "description": "AI security assistant for phishing link detection, email analysis, and compromised device symptom checking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
